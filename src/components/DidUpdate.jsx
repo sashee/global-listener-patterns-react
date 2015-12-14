@@ -36,6 +36,9 @@ const ListenerComponent = React.createClass({
 	render() {
 		return (
 			<div>
+				<div>
+					There are {this.state.listeners.length} listener(s) attached
+				</div>
 				<button onClick={this.addNewListener}>Add listener</button>
 				{this.state.listeners.length > 0 && <button onClick={this.removeLastListener}>Remove the last listener</button>}
 			</div>
@@ -52,6 +55,17 @@ const DidUpdate = React.createClass({
 	render() {
 		return (
 			<div>
+				<h3>
+					DidUpdate pattern demonstration
+				</h3>
+				<p>
+					This module allows multiple listeners and are handled through the component's state.
+					(Tip: Open the console, add some listeners and click around. Removing listeners or the
+					 component will not result in leftover handlers)
+				</p>
+				<div>
+					Events are {this.state.enabled ? "handled" : "not handled"}
+				</div>
 			{this.state.enabled && <button onClick={() => {this.setState({enabled:false})}}>Remove component</button>}
 			{!this.state.enabled && <button onClick={() => {this.setState({enabled:true})}}>Add component</button>}
 				{this.state.enabled &&

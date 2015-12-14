@@ -48,6 +48,19 @@ const Errors = React.createClass({
 	render() {
 		return (
 			<div>
+				<h3>
+					Errors demonstration
+				</h3>
+				<p>
+					This example demonstrates the different errors when you fail to
+					remove a global mouse click event listener. (Tip: Click somewhere and check the console) 
+				</p>
+				<p>
+					The component that registered the listener is removed from the page,
+					but it is still calling the handler (error #3). It also emits console.log events
+					(error #1), effectively leaking memory and cpu. Also it sets it's internal state
+					even though it is unmounted, resulting an error from React.
+				</p>
 				<div>clicks: {this.state.clicks}</div>
 				{this.state.enabled &&
 					<ListenerComponent
