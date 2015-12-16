@@ -8,9 +8,7 @@ const ClickListener = React.createClass({
 		window.removeEventListener("click", this.props.onClick);
 	},
 	render() {
-		return (
-			<div/>
-		);
+		return null;
 	}
 });
 
