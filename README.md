@@ -1,6 +1,6 @@
 # Global listener patterns in React
 
-This is a demonstration repo for a blog post.
+This is a demonstration repo for a blog post: [https://advancedweb.hu/2016/01/05/global-listener-patterns-in-react/](https://advancedweb.hu/2016/01/05/global-listener-patterns-in-react/)
 
 There are a few patterns you can use when managing listeners outside the component's scope. In this post and repository,
 I'll introduce three of them.
